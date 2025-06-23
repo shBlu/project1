@@ -1,6 +1,7 @@
+import { createServer } from "http";
 import app from "./app";
 const PORT =  3000;
-
-app.listen(PORT, () => {
+const server = createServer(app);
+server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
